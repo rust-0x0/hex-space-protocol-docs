@@ -54,14 +54,14 @@ brew install binaryen
 
 ## Setup Contracts
 
-HexSpaceSocialGraph Protocol Contracts are provided in `https://github.com/rust-0x0/5degrees-protocol-substrate/tree/dev`. 
+HexSpaceSocialGraph Protocol Contracts are provided in `https://github.com/rust-0x0/hex-space-protocol-substrate/tree/milestone-1`. 
 
 It's developed with ink!.
 
 ### Get contracts
 
 ```
-git clone -b dev https://github.com/rust-0x0/5degrees-protocol-substrate.git
+git clone -b milestone-1 https://github.com/rust-0x0/hex-space-protocol-substrate.git
 ```
 
 
@@ -70,7 +70,8 @@ git clone -b dev https://github.com/rust-0x0/5degrees-protocol-substrate.git
 The HexSpaceSocialGraph-Protocol provides script to simplify the contract compilation process while collecting the editing results into a unified directory to facilitate contract deployment and usage. Execute in the project root directory
 
 ```bash
-bash ./build-all.sh
+cd hex-space-protocol-substrate
+bash ./build.sh
 ```
 
 All contract compilation results are saved in the release directory.
@@ -82,9 +83,7 @@ All contract compilation results are saved in the release directory.
 ` cargo  contract build`
 
 In HexSpaceSocialGraph project 
-
-like cd erc1155/       
-
+   
 
 ## Deploy
 
@@ -94,32 +93,25 @@ Use `https://polkadot.js.org/apps/` upload target/ink .contract file to deploy c
 
 #### 1.set the node IP and port ( `ws://127.0.0.1:9944` default).
 
-![](./1.png)
+![](./images/deploy1.png)
 
 #### Upload & Deploy contracts
 
 Enter `Developer-> Contracts` and click Upload & deploy code.
 
-![](./2.jpg)
+![image](./images/deploy2.png)
 
-Select the contract files that required to deploy contract.
+Select the ERC1155 contract files that required to deploy contract.
 
-![](./3.jpg)
+![](./images/deploy3.png)
 
-After you upload the contracts, you can instantiate the contract on the chain. In substrate, you need to perform the contract’s initialization function, usually new or the default function.
+After you upload the contracts,  click 'copy' icon copy erc1155 hash value.
+ you can instantiate the contract on the chain. In substrate, you need to perform the contract’s initialization function, usually new or the default function.
+Select the initialization function call, fill in the initialization parameters, set the main contract administrator, and set the contract initial balance, click `Deploy`. Click `Deploy `, and `Submit and Sign`
 
-![](./4.jpg)
+## Initialization & Deploy HexSpace
 
-Select the initialization function call, fill in the initialization parameters, set the main contract administrator, and set the contract initial balance, click `Deploy`.
-click `Deploy `, and `Submit and Sign`
-
-## Initialization
-
-![](./5.jpg)
-
-Deploy HexSpace.
-
-![](./6.jpg)
+![](./images/deploy4.png)
 
 # Setup HexSpaceSocialGraph Protocol Front-end
 
@@ -129,30 +121,26 @@ Please install `Polkadot JS Extension` before you start. You can get it from her
 
 ### Get source code
 
-Please get the code from `https://github.com/rust-0x0/5degrees-protocol-front-end/tree/dev`
+Please get the code from `https://github.com/rust-0x0/hex-space-protocol-front-end/tree/milestone-1`
 
 ```
-git clone -b dev https://github.com/rust-0x0/5degrees-protocol-front-end.git
+git clone -b milestone-1 https://github.com/rust-0x0/hex-space-protocol-front-end.git
 ```
 
 ### Config front-end
 
-#### 1. Replace contract address
-
-![](./front-1.jpg)
-
-![](./front-3.jpg)
-
 Please find the correct contract address in `.env `, and update the correct  contract address in   ```.env ```. 
+#### 1. Click Hex Space contract icon,copy the contract address. 
+![](./images/deploy5.png)
+#### 2. Replace contract address of key 'REACT_APP_CONTRACT_ADDRESS' in .env 
 
-
+![](./images/deploy6.png)
 
 #### 3. Replace connect path
 
 And replace `.env REACT_APP_PROVIDER_SOCKET` to your connect path.
 
 it should be `ws://127.0.0.1:9944` by default.
-
 
 ### Install dependencies
 
@@ -164,11 +152,9 @@ Run `yarn ` to install packages needed for this App.
 Open http://localhost:8100 to view it in the browser.
 
 
-
 ##### Get gas from ALICE
 
 In `https://polkadot.js.org/apps` Account page, use account  send gas to your extension account.
-
 
 
 ## Acknowledgements
@@ -183,5 +169,6 @@ NOTE: This pallet implements the aforementioned process in a simplified way, thu
 ## Upstream
 
 This project was forked from
+- [the Ink! Contract Example ERC115](https://github.com/paritytech/ink/tree/master/examples/erc1155)
 - [the Substrate Contracts node](https://github.com/paritytech/substrate-contracts-node.git).
 - [the Substrate DevHub Front-end Template](https://github.com/substrate-developer-hub/substrate-front-end-template)
