@@ -76,22 +76,20 @@ bash ./build.sh
 
 All contract compilation results are saved in the release directory.
 
-### Compile  one by one 
-
-##### compile
-
-` cargo  contract build`
-
-In HexSpaceSocialGraph project 
-   
+## Testing contracts
+Run the tests with:
+```bash
+cd  hex-space-protocol-substrate/hex-space
+cargo test
+```
 
 ## Deploy
 
 The HexSpaceSocialGraph Protocol creates the substrate chain to connect the POLKADOT Ecology, and all contracts are deployed on the HexSpaceSocialGraph dev node. This section explains how to make use of Polkadot JS App to deploy contracts.
 
-Use `https://polkadot.js.org/apps/` upload target/ink .contract file to deploy contract.
+Use `https://polkadot.js.org/apps/` upload .contract file to deploy contract.
 
-#### 1.set the node IP and port ( `ws://127.0.0.1:9944` default).
+#### set the node IP and port ( `ws://127.0.0.1:9944` default).
 
 ![](./images/deploy1.png)
 
@@ -129,7 +127,7 @@ git clone -b milestone-1 https://github.com/rust-0x0/hex-space-protocol-front-en
 
 ### Config front-end
 
-Please find the correct contract address in `.env `, and update the correct  contract address in   ```.env ```. 
+Please find the correct contract address in `example.env ` rename the file name to  '.env', and update the correct  contract address in   ```.env ```. 
 #### 1. Click Hex Space contract icon,copy the contract address. 
 ![](./images/deploy5.png)
 #### 2. Replace contract address of key 'REACT_APP_CONTRACT_ADDRESS' in .env 
