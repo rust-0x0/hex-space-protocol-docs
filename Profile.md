@@ -13,6 +13,9 @@ You need to select development test account .  create new account or import acco
 3. If you want to add properties like Twitter , after you have entered the key and value, click [Add].
 -  suggest to use JSON and encode it to string through base64, which will help fast info extension.
     ![image](./images/profile3.png)
-4. Click [Save on chain] .
+4. Click [Save on chain] 
+   ![image](./images/profile5.png)
 5. Increase Max Supply:  new max supply should be greater than the max supply . decrease Max Supply:  new max supply should be less than the max supply .
     ![image](./images/profile4.png)
+6.Click [InitNFTProfileimagesForTestAccountsOnDevMode]  Init NFT profile images for test accounts on dev mode.
+    ![image](./images/profile6.png)
