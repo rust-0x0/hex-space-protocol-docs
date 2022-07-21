@@ -149,6 +149,12 @@ Run `yarn ` to install packages needed for this App.
 `yarn start` runs the app in the development mode.
 Open http://localhost:8100 to view it in the browser.
 
+### front-end  Test Guide
+
+- [How to follow my Web3.0 friends Tutorial](./Follow.md)
+- [How to edit the Profile on HexSpaceFrontEnd  Tutorial](./Profile.md)
+
+
 ##### Get gas from extension account
 
 In `https://polkadot.js.org/apps` Account page, use account  send gas to your extension account.
