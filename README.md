@@ -64,7 +64,7 @@
 
  We need to use a Substrate node with the built-in `pallet-contracts` pallet. For this workshop we'll use a pre-configured Substrate node client. 
 
-`cargo install contracts-node --git https://github.com/paritytech/substrate-contracts-node.git --tag v0.3.0 --force --locked`
+`cargo install contracts-node --git https://github.com/paritytech/substrate-contracts-node.git --tag v0.16.0 --force --locked`
 
 ###  2.2. <a name='inkCLI'></a>2. ink! CLI
 
