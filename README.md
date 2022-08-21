@@ -132,11 +132,6 @@ Enter `Developer-> Contracts` and click Upload & deploy code.
 
 ![image](./images/deploy2.png)
 
-Select the ERC1155 contract files that required to deploy contract.
-
-![](./images/deploy3.png)
-
-After you upload the contracts,  click 'copy' icon copy erc1155 hash value.
  you can instantiate the contract on the chain. In substrate, you need to perform the contract’s initialization function, usually new or the default function.
 Select the initialization function call, fill in the initialization parameters, set the main contract administrator, and set the contract initial balance, click `Deploy`. Click `Deploy `, and `Submit and Sign`
 
